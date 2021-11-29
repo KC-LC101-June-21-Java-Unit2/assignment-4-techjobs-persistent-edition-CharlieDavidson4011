@@ -2,6 +2,8 @@ package org.launchcode.techjobs.persistent.models;
 
 import org.launchcode.techjobs.persistent.models.data.Employer;
 import org.launchcode.techjobs.persistent.models.data.Skill;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
@@ -52,4 +54,7 @@ public class Job extends AbstractEntity{
         this.skills = skills;
     }
 
+    @Repository
+    public static interface JobRepository extends CrudRepository<Job, Integer> {
+    }
 }
