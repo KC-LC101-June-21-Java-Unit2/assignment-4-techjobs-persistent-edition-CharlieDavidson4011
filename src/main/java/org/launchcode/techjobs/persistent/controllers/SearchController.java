@@ -2,7 +2,6 @@ package org.launchcode.techjobs.persistent.controllers;
 
 import org.launchcode.techjobs.persistent.models.Job;
 import org.launchcode.techjobs.persistent.models.JobData;
-import org.launchcode.techjobs.persistent.models.data.JobRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,7 +18,7 @@ import static org.launchcode.techjobs.persistent.controllers.ListController.colu
 public class SearchController {
 
     @Autowired
-    private JobRepository jobRepository;
+    private Job.JobRepository jobRepository;
 
     @RequestMapping("")
     public String search(Model model) {
