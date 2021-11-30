@@ -53,12 +53,12 @@ public class HomeController {
                                     Errors errors, Model model,
                                     @RequestParam int employerId,
                                     @RequestParam(required = false) List<Integer> skills) {
-        if (errors.hasErrors())
+        if (errors.hasErrors()) {
             model.addAttribute("title", "Add Job");
-        model.addAttribute("employers", employerRepository.findAll());
-        model.addAttribute("skills", skillRepository.findAll());
-        return "add";
-
+            model.addAttribute("employers", employerRepository.findAll());
+            model.addAttribute("skills", skillRepository.findAll());
+            return "add";
+        }
         Optional<Employer> employerResult = employerRepository.findById(employerId);
         Employer employer = employerResult.get();
         newJob.setEmployer(employer);
