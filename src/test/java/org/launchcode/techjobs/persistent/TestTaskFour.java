@@ -1,9 +1,17 @@
 package org.launchcode.techjobs.persistent;
 
+import mockit.Mocked;
+import org.hibernate.jdbc.Expectations;
 import org.junit.jupiter.api.Test;
 import org.launchcode.techjobs.persistent.AbstractTest;
-import org.launchcode.techjobs.persistent.models.data.Employer;
-import org.launchcode.techjobs.persistent.models.data.Skill;
+import org.launchcode.techjobs.persistent.controllers.HomeController;
+import org.launchcode.techjobs.persistent.controllers.ListController;
+import org.launchcode.techjobs.persistent.models.Job;
+import org.launchcode.techjobs.persistent.models.data.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.ExtendedModelMap;
+import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 
 import javax.persistence.ManyToMany;
 import java.io.IOException;
