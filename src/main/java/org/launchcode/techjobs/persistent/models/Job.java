@@ -54,7 +54,4 @@ public class Job extends AbstractEntity{
         this.skills = skills;
     }
 
-    @Repository
-    public static interface JobRepository extends CrudRepository<Job, Integer> {
-    }
 }
