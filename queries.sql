@@ -7,6 +7,7 @@ SELECT NAME FROM EMPLOYER WHERE LOCATION = "Kansas";
 -- Part 3: Test it with SQL
 
 DROP TABLE JOB;
+//Comment
 
 -- Part 4: Test it with SQL
 
